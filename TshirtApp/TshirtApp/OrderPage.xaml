@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TshirtApp.OrderPage" BackgroundColor="OrangeRed"     Title="Quali-Tees">
+    <!-- Place new controls here -->
+    <ContentPage.Resources>
+        <Style TargetType="Frame">
+            <Setter Property="BackgroundColor" Value="Yellow" />
+            <Setter Property="BorderColor" Value="Yellow" />
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="CornerRadius" Value="15" />
+        </Style>
+
+        <Style TargetType="Label">
+            <Setter Property="Margin" Value="0, 4" />
+        </Style>
+
+        <Style x:Key="headerLabel" TargetType="Label">
+            <Setter Property="Margin" Value="0, 8" />
+            <Setter Property="FontSize" Value="Large" />
+            <Setter Property="TextColor" Value="Blue" />
+        </Style>
+
+        <Style TargetType="Image">
+            <Setter Property="FlexLayout.Order" Value="-1" />
+            <Setter Property="FlexLayout.AlignSelf" Value="Center" />
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Text" Value="Place Order" />
+            <Setter Property="FontSize" Value="Large" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="BackgroundColor" Value="Green" />
+            <Setter Property="CornerRadius" Value="20" />
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView Orientation="Both">
+        <FlexLayout>
+            <Frame WidthRequest="300"
+                   HeightRequest="480" BackgroundColor="Yellow"  BorderColor="Yellow" HasShadow="True" >
+
+                <FlexLayout Direction="Column">
+                    <Label Text="Black Plain Tshirt" Style="{StaticResource headerLabel}" TextColor="Black" FontAttributes="Bold" />
+
+                    <Image Source="BlackTshirt.jpg"
+                 WidthRequest="180"
+                 HeightRequest="180" />
+                    <Label FlexLayout.Grow="1" />
+                    <Button x:Name="BlackShirtButton" Clicked="BlackShirtButton_Clicked" />
+                    <StackLayout>
+                        <StackLayout>
+
+
+                          
+
+                        </StackLayout>
+
+
+
+                    </StackLayout>
+                </FlexLayout>
+            </Frame>
+            <Frame WidthRequest="300" HeightRequest="480" BackgroundColor="Red">
+                <FlexLayout Direction="Column">
+                    <Label Text="Green Plain Tshirt" 
+                 Style="{StaticResource headerLabel}"  TextColor="Black" FontAttributes="Bold"/>
+
+                    <Image Source="GreenT.jpg"
+                WidthRequest="240"
+                HeightRequest="180" />
+                    <Label FlexLayout.Grow="1" />
+                    <Button x:Name="GreenShirtButton" Clicked="GreenShirtButton_Clicked" />
+                    <StackLayout>
+
+
+
+
+                    </StackLayout>
+                </FlexLayout>
+            </Frame>
+
+            <Frame WidthRequest="300"
+                   HeightRequest="480">
+
+                <FlexLayout Direction="Column">
+                    <Label Text="Red Plain Tshirt"
+                           Style="{StaticResource headerLabel}"  TextColor="Black" FontAttributes="Bold"/>
+
+
+                    <Image Source="RedT.jpg"
+                     WidthRequest="180"
+                      HeightRequest="180" />
+                    <Label FlexLayout.Grow="1" />
+                    <Button x:Name="RedShirtButton" Clicked="RedShirtButton_Clicked" />
+                </FlexLayout>
+            </Frame>
+            <StackLayout>
+
+
+
+            </StackLayout>
+        </FlexLayout>
+    </ScrollView>
+
+
+</ContentPage>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TshirtApp.MainPage" Title="Main">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Quali-Tees"
+                 IconImageSource="design.jpgs"
+                 Order="Primary"
+                 Priority="0" />
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        
+  
+    <StackLayout>
+        <StackLayout Margin="20" VerticalOptions="StartAndExpand">
+            <Label Text="Name" />
+            <Entry Text="{Binding Name}" />
+            <Label Text="Gender" />
+            <Entry Text="{Binding Gender}" />
+            <Label Text="Tshirt Size" />
+            <Entry Text="{Binding TShirtSize}" />
+            <Label Text="Date of Order" />
+            <Entry Text="{Binding DateOfOrder}" />
+            <Label Text="Shirt Color" />
+            <Entry Text="{Binding TShirtColor}" />
+            <Label Text="Shipping Address" />
+            <Entry Text="{Binding ShippingAddress}" />
+            
+           </StackLayout>
+         <!-- Place new controls here -->
+        <Button x:Name="SaveButton" Text="Done" Clicked="SaveButton_Clicked"/>
+        <Button Text="Show Shirt Orders" Clicked="Button_Clicked" />
+    </StackLayout>
+
+    </ScrollView>
+
+</ContentPage>
